@@ -1,18 +1,50 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/cpp
 {
-	"name": "C++",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
-	"postCreateCommand": "uvx meson setup --reconfigure builddir",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"vadimcn.vscode-lldb",
-				"llvm-vs-code-extensions.vscode-clangd",
-				"asvetliakov.vscode-neovim"
-			]
-		}
-	}
+    "name": "C++",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "postCreateCommand": "uvx meson setup --reconfigure builddir",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "vadimcn.vscode-lldb",
+                "llvm-vs-code-extensions.vscode-clangd",
+                "asvetliakov.vscode-neovim",
+                "Catppuccin.catppuccin-vsc",
+                "Catppuccin.catppuccin-vsc-icons",
+                "catppuccin.catppuccin-vsc-pack"
+            ],
+            "settings": {
+                "workbench.colorTheme": "Catppuccin Mocha",
+                "workbench.iconTheme": "catppuccin-mocha",
+                "debug.console.fontFamily": "'JetBrainsMono Nerd Font', Consolas, Pretendard",
+                "editor.accessibilitySupport": "off",
+                "editor.bracketPairColorization.enabled": true,
+                "editor.codeLensFontFamily": "'JetBrainsMono Nerd Font', Consolas, Pretendard",
+                "editor.cursorBlinking": "solid",
+                "editor.cursorSurroundingLines": 100,
+                "editor.detectIndentation": false,
+                "editor.fontFamily": "'JetBrainsMono Nerd Font', Consolas, Pretendard",
+                "editor.fontLigatures": true,
+                "editor.fontSize": 14,
+                "editor.formatOnPaste": true,
+                "editor.formatOnSave": false,
+                "editor.inlayHints.enabled": "on",
+                "editor.inlayHints.fontFamily": "'JetBrainsMono Nerd Font', Consolas, Pretendard",
+                "editor.inlayHints.fontSize": 0,
+                "editor.inlayHints.padding": true,
+                "editor.inlineSuggest.enabled": true,
+                "editor.letterSpacing": 0,
+                "editor.renderWhitespace": "selection",
+                "editor.rulers": [80, 120],
+                "editor.smoothScrolling": true,
+                "editor.snippetSuggestions": "inline",
+                "editor.stickyScroll.enabled": true,
+                "editor.tabSize": 4
+            }
+        }
+    },
+    "initializeCommand": "docker pull ghcr.io/lewohy/mnc:latest"
 }

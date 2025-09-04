@@ -1,3 +1,3 @@
 project('cse3309005', 'cpp')
 
-executable('main', './src/main.cpp')
+executable('a.out', './src/main.cpp')

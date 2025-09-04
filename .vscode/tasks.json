@@ -22,6 +22,22 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "teco: test",
+            "type": "shell",
+            "command": "teco",
+            "args": [
+                "--command",
+                "${workspaceFolder}/builddir/a.out",
+                "--case-dir",
+                "cases"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "dependsOn": "meson: build"
         }
     ]
 }

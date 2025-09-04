@@ -12,7 +12,8 @@
             "args": [],
             "cwd": "${workspaceFolder}",
             "preLaunchTask": "meson: build",
-            "initCommands": ["settings set target.disable-aslr false"]
+            "initCommands": ["settings set target.disable-aslr false"],
+            "stdio": null
         }
     ]
 }
