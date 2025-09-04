@@ -14,11 +14,13 @@
                 "asvetliakov.vscode-neovim",
                 "Catppuccin.catppuccin-vsc",
                 "Catppuccin.catppuccin-vsc-icons",
-                "catppuccin.catppuccin-vsc-pack"
+                "catppuccin.catppuccin-vsc-pack",
+                "mesonbuild.mesonbuild"
             ],
             "settings": {
                 "workbench.colorTheme": "Catppuccin Mocha",
                 "workbench.iconTheme": "catppuccin-mocha",
+                "workbench.secondarySideBar.defaultVisibility": "hidden",
                 "debug.console.fontFamily": "'JetBrainsMono Nerd Font', Consolas, Pretendard",
                 "editor.accessibilitySupport": "off",
                 "editor.bracketPairColorization.enabled": true,
