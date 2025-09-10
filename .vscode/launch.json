@@ -8,10 +8,10 @@
             "type": "lldb",
             "request": "launch",
             "name": "Launch",
-            "program": "${workspaceFolder}/builddir/main",
+            "program": "${workspaceFolder}/builddir/a.out",
             "args": [],
             "cwd": "${workspaceFolder}",
-            "preLaunchTask": "meson: build",
+            "preLaunchTask": "meson build",
             "initCommands": ["settings set target.disable-aslr false"],
             "stdio": ["${workspaceFolder}/cases/test.in", null, null],
         }
