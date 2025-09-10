@@ -1,11 +1,9 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/cpp
 {
-    "name": "C++",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
-    "postCreateCommand": "uvx meson setup --reconfigure builddir",
+    "name": "CPP PS",
+    "image": "ghcr.io/lewohy/cse3309-container:latest",
+    "postCreateCommand": "meson setup --reconfigure builddir",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -18,9 +16,73 @@
                 "mesonbuild.mesonbuild"
             ],
             "settings": {
+                "workbench.activityBar.iconClickBehavior": "focus",
+                "workbench.colorCustomizations": {
+                    "debugConsole.errorForeground": "#ff0000",
+                    "debugConsole.infoForeground": "#00ff88",
+                    "debugConsole.sourceForeground": "#cccccc",
+                    "debugConsole.warningForeground": "#ffff00",
+                    "editor.findMatchBackground": "#6c6897",
+                    "editor.foreground": "#d4d4d4",
+                    "editor.selectionBackground": "#264f78",
+                    "editorBracketHighlight.foreground1": "#00ffff",
+                    "editorBracketHighlight.foreground10": "#ffff00",
+                    "editorBracketHighlight.foreground11": "#00ffff",
+                    "editorBracketHighlight.foreground2": "#00ff99",
+                    "editorBracketHighlight.foreground3": "#ffff00",
+                    "editorBracketHighlight.foreground4": "#ff0088",
+                    "editorBracketHighlight.foreground5": "#ff00ff",
+                    "editorBracketHighlight.foreground6": "#ffffff",
+                    "editorBracketHighlight.foreground7": "#000000",
+                    "editorBracketHighlight.foreground8": "#ff0000",
+                    "editorBracketHighlight.foreground9": "#00ff00",
+                    // "editorCursor.background": "#0000ff",
+                    // "editorCursor.foreground": "#ff0000",
+                    "editorCursor.background": "#414141",
+                    "editorCursor.foreground": "#aeafad",
+                    "editorError.foreground": "#ff0000",
+                    "editorInlayHint.background": "#ffffff15",
+                    "editorInlayHint.foreground": "#ffffff45",
+                    "editorInlayHint.parameterBackground": "#ffffff15",
+                    "editorInlayHint.parameterForeground": "#ffffff45",
+                    "editorInlayHint.typeBackground": "#ffffff15",
+                    "editorInlayHint.typeForeground": "#ffffff45",
+                    "editorWarning.foreground": "#ffff00",
+                    "gitDecoration.addedResourceForeground": "#81b88b",
+                    "gitDecoration.conflictingResourceForeground": "#6c6cc4",
+                    "gitDecoration.deletedResourceForeground": "#ff0000",
+                    "gitDecoration.ignoredResourceForeground": "#555555",
+                    "gitDecoration.modifiedResourceForeground": "#00ff88",
+                    "gitDecoration.renamedResourceForeground": "#00ff00",
+                    "gitDecoration.stageDeletedResourceForeground": "#FF0000",
+                    "gitDecoration.stageModifiedResourceForeground": "#e2c08d",
+                    "gitDecoration.submoduleResourceForeground": "#8db9e2",
+                    "gitDecoration.untrackedResourceForeground": "#5dffff",
+                    "list.errorForeground": "#ff0000",
+                    "list.warningForeground": "#ffff00"
+                },
                 "workbench.colorTheme": "Catppuccin Mocha",
+                "workbench.editor.editorActionsLocation": "default",
+                "workbench.editor.empty.hint": "hidden",
+                "workbench.editor.enablePreview": false,
+                "workbench.editor.labelFormat": "medium",
+                "workbench.editorAssociations": {
+                    "*.copilotmd": "vscode.markdown.preview.editor",
+                    "*.obj": "3dviewer.viewer",
+                    "*.png": "imagePreview.previewEditor",
+                    "{hexdiff}:/**/*.*": "hexEditor.hexedit"
+                },
                 "workbench.iconTheme": "catppuccin-mocha",
+                "workbench.layoutControl.enabled": false,
+                "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
+                "workbench.preferredHighContrastColorTheme": "Catppuccin Mocha",
+                "workbench.preferredHighContrastLightColorTheme": "Catppuccin Mocha",
+                "workbench.preferredLightColorTheme": "Catppuccin Mocha",
                 "workbench.secondarySideBar.defaultVisibility": "hidden",
+                "workbench.startupEditor": "none",
+                "workbench.tree.indent": 16,
+                "workbench.tree.renderIndentGuides": "always",
+                "workbench.view.alwaysShowHeaderActions": true,
                 "debug.console.fontFamily": "'JetBrainsMono Nerd Font', Consolas, Pretendard",
                 "editor.accessibilitySupport": "off",
                 "editor.bracketPairColorization.enabled": true,
@@ -44,9 +106,99 @@
                 "editor.smoothScrolling": true,
                 "editor.snippetSuggestions": "inline",
                 "editor.stickyScroll.enabled": true,
-                "editor.tabSize": 4
+                "editor.tabSize": 4,
+                "terminal.integrated.allowedLinkSchemes": [
+                    "docker-desktop",
+                    "file",
+                    "http",
+                    "https",
+                    "mailto",
+                    "vscode",
+                    "vscode-insiders"
+                ],
+                "terminal.integrated.cursorStyle": "line",
+                "terminal.integrated.cursorWidth": 2,
+                "terminal.integrated.defaultProfile.linux": "fish",
+                "terminal.integrated.defaultProfile.windows": "pwsh",
+                "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font', Consolas, Pretendard",
+                "terminal.integrated.fontLigatures.enabled": true,
+                "terminal.integrated.fontSize": 14,
+                "terminal.integrated.profiles.windows": {
+                    "pwsh": {
+                        "icon": "terminal-powershell",
+                        "path": "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
+                    }
+                },
+                "terminal.integrated.scrollback": 50000,
+                "terminal.integrated.smoothScrolling": true,
+                "terminal.integrated.tabs.enableAnimation": true,
+                "terminal.integrated.tabs.title": "${shellType}${separator}${shellCommand}",
+                "vscode-neovim.ctrlKeysForInsertMode": [
+                    // "a", // for select all
+                    "b",
+                    // "c", // for copy
+                    "d",
+                    "e",
+                    // "f", // for search
+                    "g",
+                    "h",
+                    "i",
+                    "j",
+                    // "k", // for vscode
+                    "l",
+                    "m",
+                    "n",
+                    "o",
+                    "p",
+                    "q",
+                    "r",
+                    // "s", // for save
+                    "t",
+                    "u",
+                    // "v", // for paste
+                    "w",
+                    "x", // for cut
+                    "y"
+                    // "z", // for undo
+                ],
+                "vscode-neovim.ctrlKeysForNormalMode": [
+                    "/",
+                    "]",
+                    // "c",
+                    "a",
+                    "b",
+                    "backspace",
+                    "d",
+                    "delete",
+                    "down",
+                    "e",
+                    // "k", // for vscode
+                    "f",
+                    "g",
+                    "h",
+                    "i",
+                    "j",
+                    "l",
+                    "left",
+                    "m", // for save
+                    "n",
+                    "o",
+                    "p",
+                    "q",
+                    "r",
+                    "right",
+                    // "z", // for undo
+                    "s",
+                    "t",
+                    "u",
+                    "up",
+                    "v",
+                    "w",
+                    "x",
+                    "y"
+                ]
             }
         }
     },
-    "initializeCommand": "docker pull ghcr.io/lewohy/mnc:latest"
+    "initializeCommand": "docker pull ghcr.io/lewohy/cse3309-container:latest"
 }

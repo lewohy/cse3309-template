@@ -4,27 +4,21 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "meson: setup",
+            "label": "meson build",
             "type": "shell",
-            "command": "uvx",
-            "args": ["meson", "setup", "--reconfigure", "builddir"],
-            "group": {
-                "kind": "build",
-                "isDefault": false
-            }
-        },
-        {
-            "label": "meson: build",
-            "type": "shell",
-            "command": "uvx",
-            "args": ["meson", "compile", "-C", "builddir"],
+            "command": "meson",
+            "args": [
+                "compile",
+                "-C",
+                "builddir"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
         },
         {
-            "label": "teco: test",
+            "label": "teco test",
             "type": "shell",
             "command": "teco",
             "args": [
@@ -37,7 +31,8 @@
                 "kind": "test",
                 "isDefault": true
             },
-            "dependsOn": "meson: build"
+            "dependsOn": "meson build",
+            "problemMatcher": []
         }
     ]
 }
