@@ -42,3 +42,4 @@
 
 /builddir
 /cases/*
+!/win/*
