@@ -10,8 +10,12 @@
             "extensions": [
                 "asvetliakov.vscode-neovim",
                 "vadimcn.vscode-lldb",
-                "-GitHub.copilot"
-            ]
+                "-GitHub.copilot",
+                "-GitHub.copilot-chat"
+            ],
+            "settings": {
+                "chat.commandCenter.enabled": false
+            }
         }
     }
 }
