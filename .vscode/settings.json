@@ -9,8 +9,6 @@
     },
     "hide-files.files": [],
     "remote.extensionKind": {
-        "asvetliakov.vscode-neovim": [
-            "workspace"
-        ]
+        "asvetliakov.vscode-neovim": ["workspace"]
     }
 }
