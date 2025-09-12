@@ -10,9 +10,75 @@
             "extensions": [
                 "asvetliakov.vscode-neovim",
                 "vadimcn.vscode-lldb",
-                "-GitHub.copilot-chat"
+                "-GitHub.copilot-chat",
+                "llvm-vs-code-extensions.vscode-clangd"
             ],
-            "settings": {}
+            "settings": {
+                "vscode-neovim.ctrlKeysForInsertMode": [
+                    // "a", // for select all
+                    "b",
+                    // "c", // for copy
+                    "d",
+                    "e",
+                    // "f", // for search
+                    "g",
+                    "h",
+                    "i",
+                    "j",
+                    // "k", // for vscode
+                    "l",
+                    "m",
+                    "n",
+                    "o",
+                    "p",
+                    "q",
+                    "r",
+                    // "s", // for save
+                    "t",
+                    "u",
+                    // "v", // for paste
+                    "w",
+                    "x", // for cut
+                    "y"
+                    // "z", // for undo
+                ],
+                "vscode-neovim.ctrlKeysForNormalMode": [
+                    "/",
+                    "]",
+                    // "c",
+                    "a",
+                    "b",
+                    "backspace",
+                    "d",
+                    "delete",
+                    "down",
+                    "e",
+                    // "k", // for vscode
+                    "f",
+                    "g",
+                    "h",
+                    "i",
+                    "j",
+                    "l",
+                    "left",
+                    "m", // for save
+                    "n",
+                    "o",
+                    "p",
+                    "q",
+                    "r",
+                    "right",
+                    // "z", // for undo
+                    "s",
+                    "t",
+                    "u",
+                    "up",
+                    "v",
+                    "w",
+                    "x",
+                    "y"
+                ]
+            }
         }
     }
 }
