@@ -41,5 +41,5 @@
 *.dwo
 
 /builddir
-/cases/*
+!/cases/*
 !/win/*
