@@ -13,7 +13,7 @@
             "cwd": "${workspaceFolder}",
             "preLaunchTask": "meson build",
             "initCommands": ["settings set target.disable-aslr false"],
-            "stdio": ["${workspaceFolder}/cases/test.in", null, null],
+            "stdio": ["${workspaceFolder}/cases/test.din", null, null]
         }
     ]
 }
