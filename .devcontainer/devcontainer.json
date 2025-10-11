@@ -11,9 +11,10 @@
                 "asvetliakov.vscode-neovim",
                 "vadimcn.vscode-lldb",
                 "-GitHub.copilot-chat",
-                "llvm-vs-code-extensions.vscode-clangd"
+                "llvm-vs-code-extensions.vscode-clangd",
             ],
             "settings": {
+                "files.eol": "\n",
                 "vscode-neovim.ctrlKeysForInsertMode": [
                     // "a", // for select all
                     "b",
@@ -39,7 +40,7 @@
                     // "v", // for paste
                     "w",
                     "x", // for cut
-                    "y"
+                    "y",
                     // "z", // for undo
                 ],
                 "vscode-neovim.ctrlKeysForNormalMode": [
@@ -76,9 +77,9 @@
                     "v",
                     "w",
                     "x",
-                    "y"
-                ]
-            }
-        }
-    }
+                    "y",
+                ],
+            },
+        },
+    },
 }
