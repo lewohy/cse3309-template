@@ -41,7 +41,7 @@
                     // "v", // for paste
                     "w",
                     "x", // for cut
-                    "y",
+                    "y"
                     // "z", // for undo
                 ],
                 "vscode-neovim.ctrlKeysForNormalMode": [
@@ -78,9 +78,9 @@
                     "v",
                     "w",
                     "x",
-                    "y",
-                ],
-            },
-        },
-    },
+                    "y"
+                ]
+            }
+        }
+    }
 }
