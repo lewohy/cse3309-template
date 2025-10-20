@@ -7,15 +7,11 @@
             "label": "meson build",
             "type": "shell",
             "command": "meson",
-            "args": [
-                "compile",
-                "-C",
-                "builddir"
-            ],
+            "args": ["compile", "-C", "builddir"],
             "group": {
                 "kind": "build",
-                "isDefault": true
-            }
+                "isDefault": true,
+            },
         },
         {
             "label": "teco test",
@@ -25,14 +21,18 @@
                 "--command",
                 "${workspaceFolder}/builddir/a.out",
                 "--case-dir",
-                "cases"
+                "cases",
+                "--input-ext",
+                "in",
+                "--output-ext",
+                "ans",
             ],
             "group": {
                 "kind": "test",
-                "isDefault": true
+                "isDefault": true,
             },
             "dependsOn": "meson build",
-            "problemMatcher": []
-        }
-    ]
+            "problemMatcher": [],
+        },
+    ],
 }
