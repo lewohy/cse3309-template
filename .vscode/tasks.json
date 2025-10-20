@@ -4,6 +4,16 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "meson configure",
+            "type": "shell",
+            "command": "meson",
+            "args": ["setup", "--reconfigure", "builddir"],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
             "label": "meson build",
             "type": "shell",
             "command": "meson",
@@ -12,6 +22,9 @@
                 "kind": "build",
                 "isDefault": true,
             },
+            "dependsOn": [
+                "meson configure"
+            ]
         },
         {
             "label": "teco test",

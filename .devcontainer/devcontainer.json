@@ -12,6 +12,7 @@
                 "vadimcn.vscode-lldb",
                 "-GitHub.copilot-chat",
                 "llvm-vs-code-extensions.vscode-clangd",
+                "mesonbuild.mesonbuild"
             ],
             "settings": {
                 "files.eol": "\n",
