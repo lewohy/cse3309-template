@@ -1,0 +1,87 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/cpp
+{
+    "name": "CSE3309",
+    "image": "ghcr.io/lewohy/cse3309-container:latest",
+    "postCreateCommand": "meson setup --reconfigure builddir",
+    "initializeCommand": "docker pull ghcr.io/lewohy/cse3309-container:latest",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "asvetliakov.vscode-neovim",
+                "vadimcn.vscode-lldb",
+                "-GitHub.copilot-chat",
+                "llvm-vs-code-extensions.vscode-clangd",
+                "mesonbuild.mesonbuild",
+                "ms-vscode.cpptools"
+            ],
+            "settings": {
+                "files.eol": "\n",
+                "vscode-neovim.ctrlKeysForInsertMode": [
+                    // "a", // for select all
+                    "b",
+                    // "c", // for copy
+                    "d",
+                    "e",
+                    // "f", // for search
+                    "g",
+                    "h",
+                    "i",
+                    "j",
+                    // "k", // for vscode
+                    "l",
+                    "m",
+                    "n",
+                    "o",
+                    "p",
+                    "q",
+                    "r",
+                    // "s", // for save
+                    "t",
+                    "u",
+                    // "v", // for paste
+                    "w",
+                    "x", // for cut
+                    "y"
+                    // "z", // for undo
+                ],
+                "vscode-neovim.ctrlKeysForNormalMode": [
+                    "/",
+                    "]",
+                    // "c",
+                    "a",
+                    "b",
+                    "backspace",
+                    "d",
+                    "delete",
+                    "down",
+                    "e",
+                    // "k", // for vscode
+                    "f",
+                    "g",
+                    "h",
+                    "i",
+                    "j",
+                    "l",
+                    "left",
+                    "m", // for save
+                    "n",
+                    "o",
+                    "p",
+                    "q",
+                    "r",
+                    "right",
+                    // "z", // for undo
+                    "s",
+                    "t",
+                    "u",
+                    "up",
+                    "v",
+                    "w",
+                    "x",
+                    "y"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cppdbg",
+            "request": "launch",
+            "name": "Launch(gdb)",
+            "program": "${workspaceFolder}/builddir/a.out",
+            "args": ["<", "${workspaceFolder}/cases/test.din"],
+            "cwd": "${workspaceFolder}",
+            "MIMode": "gdb",
+            "preLaunchTask": "meson build",
+            "setupCommands": [
+                {
+                    "text": "set print pretty on",
+                },
+                {
+                    "text": "set pagination off",
+                },
+                {
+                    "text": "-enable-pretty-printing",
+                },
+                {
+                    "text": "python import sys; sys.path.append('/usr/share/gcc/python')",
+                },
+                {
+                    "text": "source /usr/share/gcc/python/libstdcxx/v6/printers.py",
+                },
+            ],
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Launch(lldb)",
+            "program": "${workspaceFolder}/builddir/a.out",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "meson build",
+            "initCommands": ["settings set target.disable-aslr false"],
+            "stdio": ["${workspaceFolder}/cases/test.din", null, null],
+        },
+    ],
+}
